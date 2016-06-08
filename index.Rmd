@@ -12,7 +12,14 @@ output:
     toc: yes
 ---
 ###Introduction to biostats
-A brief introduction to the contemporary open science, best practice data and biostatistical working tools. The primary goal is exploration of tools and approaches associated with effective, efficient, reproducible biostatistical analyses.
+A brief introduction to the contemporary open science, best-practice data and biostatistical working tools. The primary goal is exploration of tools and approaches associated with effective, efficient, reproducible biostatistical analyses. Inspirations include [software carpentry](http://software-carpentry.org), [rforcats](http://rforcats.net), and many more once I complete prep.
+
+use.ful
+
+bio.stats
+
+adventure.time
+
 
 ![](./stats.JPG)
 
@@ -32,22 +39,41 @@ library(lsmeans)
 
 ```
 
-
-
 ###Lesson 1. Data science.
+want data. have data. will collect data.
+assumption: in this course to work with data.
 
 ###Lesson 2. Workflows.
+reproduce. 
+openly.
 
 ###Lesson 3. Data handling.
+more than half the battle.
 
 ###Lesson 4. Basic statistics in r.
+descriptive stats.
+GLM.
 
 ###Lesson 5. Data visualization in r.
+basic plots.
+lattice.
+ggplot2.
+
 
 ###Lesson 6. Competency tests.
+deliberate practice.
+tested with feedback.
 
 ###Lesson 7. Advanced statistics topic 1.
+GLMM.
+regressions.
+nonparametric tests.
 
 ###Lesson 8. Advanced statistics topic 2.
+randomization.
+bootrapping.
+meta-analysis (to explore bootstrapping & variance handling).
 
 ###Lessons 9-12. Advanced statistical topics for independent projects.
+choice. need.
+
