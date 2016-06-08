@@ -12,5 +12,42 @@ output:
     toc: yes
 ---
 ###Introduction to biostats
+A brief introduction to the contemporary open science, best practice data and biostatistical working tools. The primary goal is exploration of tools and approaches associated with effective, efficient, reproducible biostatistical analyses.
+
+![](./stats.JPG)
+
+[ecoblender](http://ecoblender.org)
+
+```{r library setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+#library loads ####
+library(dplyr)
+library(lme4)
+library(lattice)
+library(latticeExtra)
+library(lsmeans)
+
+
+##load functions ####
+
+```
+
+
 
 ###Lesson 1. Data science.
+
+###Lesson 2. Workflows.
+
+###Lesson 3. Data handling.
+
+###Lesson 4. Basic statistics in r.
+
+###Lesson 5. Data visualization in r.
+
+###Lesson 6. Competency tests.
+
+###Lesson 7. Advanced statistics topic 1.
+
+###Lesson 8. Advanced statistics topic 2.
+
+###Lessons 9-12. Advanced statistical topics for independent projects.
