@@ -54,7 +54,7 @@ more than half the battle.
 descriptive stats.
 GLM.
 
-###Lesson 5. Data visualization in r.
+###Lesson 5. Data/statistical tests visualization in r.
 basic plots.
 lattice.
 ggplot2.
