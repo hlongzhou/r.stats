@@ -1,0 +1,16 @@
+---
+title:
+author: "cjlortie"
+date: "May 2016"
+output:
+  html_document:
+    theme: yeti
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+  pdf_document:
+    toc: yes
+---
+###Introduction to biostats
+
+###Lesson 1. Data science.
