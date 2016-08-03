@@ -26,7 +26,7 @@ adventure.time
 [ecoblender](http://ecoblender.org)
 
 ```{r library setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(cache = TRUE)
 #library loads ####
 library(dplyr)
 library(lme4)
@@ -42,6 +42,8 @@ library(lsmeans)
 ###Lesson 1. Data science.
 want data. have data. will collect data.
 assumption: in this course to work with data.
+data literacy is data science.
+
 
 ###Lesson 2. Workflows.
 reproduce. 
