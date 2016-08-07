@@ -64,7 +64,7 @@ you need to see data. see the trends. explore them using visuals.
 fundamental descriptive stats.
 GLM. GLMM. Post hoc tests.
 
-###Lessson 5. Wrangle, visualize, and analyze.
+###Lesson 5. Wrangle, visualize, and analyze.
 A graduate-level dataset.
 Apply your new mathemagical skills from scratch.
 A single three-hour block.
