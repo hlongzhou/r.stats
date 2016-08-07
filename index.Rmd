@@ -12,7 +12,7 @@ output:
     toc: yes
 ---
 ###Introduction to biostats
-A brief introduction to the contemporary open science, best-practice data and biostatistical working tools. The primary goal is exploration of tools and approaches associated with effective, efficient, reproducible biostatistical analyses. Inspirations include [software carpentry](http://software-carpentry.org), [rforcats](http://rforcats.net), and many more once I complete prep. The [description](http://biology.gradstudies.yorku.ca/courses/biol-5081/) provided by the university is a useful starting point in deciding if the Fall 2016 offering meets your specific needs.
+A brief introduction to the contemporary open science, best-practice data and biostatistical working tools. The primary goal is exploration of tools and approaches associated with effective, efficient, reproducible biostatistical analyses. Inspirations include [software carpentry](http://software-carpentry.org), [rforcats](http://rforcats.net), and many, more open, online, free I can direct you to as needed. The [description](http://biology.gradstudies.yorku.ca/courses/biol-5081/) provided by the university is a useful starting point in deciding if the Fall 2016 offering meets your specific needs.
 
 use.ful
 
@@ -39,43 +39,41 @@ library(lsmeans)
 
 ```
 
-###Lesson 1. Data science.
+###Lesson 1. Data science (DS).
 want data. have data. will collect data.
-assumption: in this course to work with data.
-data literacy is data science.
+assumption: in this course, you are here to work with data.
+data literacy IS data science.
 
 
-###Lesson 2. Workflows.
+###Lesson 2. Workflows & Data Wrangling.
+worflows
 reproduce. 
 openly.
 
-###Lesson 3. Data handling.
+data wrangling
 more than half the battle.
 
-###Lesson 4. Basic statistics in r.
-descriptive stats.
-GLM.
-
-###Lesson 5. Data/statistical tests visualization in r.
+###Lesson 3. Data/statistical tests visualization in r.
 basic plots.
 lattice.
 ggplot2.
+you need to see data. see the trends. explore them using visuals.
 
+###Lesson 4. Fundamental exploratory data analysis (EDA) in r.
+descriptive stats.
+GLM.
+
+###Lessson 5. Wrangle, visualize, and analyze.
+A graduate-level dataset.
+Apply your new mathemagical skills from scratch.
+A single three-hour block.
+As advanced as you want to be.
+Fundamental principles demonstrated.
+At least two fundamental statistical tests demonstrated.
 
 ###Lesson 6. Competency tests.
 deliberate practice.
 tested with feedback.
+a virtual repeat of last week.
 
-###Lesson 7. Advanced statistics topic 1.
-GLMM.
-regressions.
-nonparametric tests.
-
-###Lesson 8. Advanced statistics topic 2.
-randomization.
-bootrapping.
-meta-analysis (to explore bootstrapping & variance handling).
-
-###Lessons 9-12. Advanced statistical topics for independent projects.
-choice. need.
 
