@@ -11,7 +11,8 @@ output:
   pdf_document:
     toc: yes
 ---
-###Introduction to biostats
+### BIOL5081: Introduction to biostatistics
+###Data science (DS) & fundamental exploratory data analysis (EDA) in r
 A brief introduction to the contemporary open science, best-practice data and biostatistical working tools. The primary goal is exploration of tools and approaches associated with effective, efficient, reproducible biostatistical analyses. Inspirations include [software carpentry](http://software-carpentry.org), [rforcats](http://rforcats.net), and many, more open, online, free I can direct you to as needed. The [description](http://biology.gradstudies.yorku.ca/courses/biol-5081/) provided by the university is a useful starting point in deciding if the Fall 2016 offering meets your specific needs.
 
 use.ful
@@ -76,4 +77,5 @@ deliberate practice.
 tested with feedback.
 a virtual repeat of last week.
 
+###Lessons 7-12. Advanced environmental data analyses
 
