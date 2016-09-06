@@ -24,11 +24,7 @@ adventure.time
 ![](./stats.JPG)
 
 
-
-Here is the course outline.
-
-![](./BIOL5081-Fall2016.pdf)
-
+[Course outline](https://github.com/cjlortie/r.stats/blob/gh-pages/BIOL5081-Fall2016.pdf)
 
 ```{r library setup, include=FALSE}
 knitr::opts_chunk$set(cache = TRUE)
