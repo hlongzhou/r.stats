@@ -1,0 +1,11 @@
+base
+dplyr
+Matrix
+lme4
+lattice
+RColorBrewer
+latticeExtra
+estimability
+lsmeans
+ggplot2
+reshape2
