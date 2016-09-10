@@ -127,7 +127,32 @@ openly.
 data wrangling
 more than half the battle.
 
+![](./beemo.rodeo.png)
+
 base r functions versus dplyr and other more modern libraries.
+
+PK talk here :)
+
+<b>Worflow</b>
+Suggested example
+
+<b>Data wrangling</b>
+Base R
+aggregate
+tapply
+sapply 
+lappy
+subsetting
+filters
+as.factor
+is.numeric
+na
+
+dyplyr
+[Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+tidyr 
+[tidyr](https://cran.r-project.org/web/packages/tidyr/README.html)
 
 ###Lesson 3. Visualization in r (VR).
 basic plots.
