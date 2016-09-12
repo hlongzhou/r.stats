@@ -133,7 +133,7 @@ anova(m1, test="Chisq") #test whether the differences in model are different
 
 ```
 
-<b> Practical outcomes of R stats </b>
+<b> Practical outcomes of R stats useful for competency test</b>
 Understand the difference between R and R Studio.
 Use scripts or R Markdown files to save all your work.
 Be prepared to share you code.
@@ -150,36 +150,55 @@ more than half the battle.
 
 ![](./beemo.rodeo.png)
 
-base r functions versus dplyr and other more modern libraries.
-
 PK talk here :)
+
+<b> Philosophy of R stats </b>
+Tidy data make your life easier. Data strutures should match intuition and common sense. Data should have logical structure.  Rows are are observations, columns are variables. Tidy data also increase the viability that others can use your data, do better science, reuse science, and help you and your ideas survive and thrive. A workflow should also include the wrangling you did to get your data ready. If you are data are already very clean in a spreadsheet and easily become a literate, logical dataframe, you should still use annotation within the introductory code to explain the meta-data of your data to some extent and what you did pre-R to get it tidy.  The philosophy here is very similar to the data viz lesson forthcoming with two dominant paradigms. Base R code functions, and pipes %>% and the logic embodied within the libraries associated with the the tidyverse. Generally, I prefer the tidyverse because it is more logical and much easier to remember.  It also has some specific functions needed to address common errors in modern data structures with little code needed to fix them up.
 
 <b>Worflow</b>
 Suggested example
 
 <b>Data wrangling</b>
-Base R
+
+<b>Base R</b>
+key concepts
 aggregate
 tapply
 sapply 
 lappy
 subsetting
-filters
 as.factor
 is.numeric
 na
 
-dyplyr
+<b>tidyverse: primarily dyplyr</b>
 [Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 tidyr 
 [tidyr](https://cran.r-project.org/web/packages/tidyr/README.html)
+
+<b> Practical outcomes of R stats useful for competency test</b>
 
 ###Lesson 3. Visualization in r (VR).
 basic plots.
 lattice.
 ggplot2.
 you need to see data. see the trends. explore them using visuals.
+
+PK talk here :)
+
+<b> Philosophy of R stats </b>
+Clean simple graphics are powerful tools in statistics (and in scientific communication).  Tufte and others have shaped data scientists and statisticians in developing more libraries, new standards, and assumptions associated with graphical representations of data.  Data viz must highlight the differences, show underlying data structures, and provide insights into the specific research project. R is infinitely customizable in all these respects.  There are at least two major current paradigms (there are more these are the two dominant idea sets).  Base R plots are simple, relatively flexible, and very easy. However, their grammar, i.e their rules of coding are not modern. Ggplot and related libraries invoke a new, formal grammar of graphics that is more logical, more flexible, but divergent from base R code. It is worth the time to understand the differences and know when to use each.
+
+<b>Base R</b>
+
+<b>GGPLOT2</b>
+qplots
+
+ggplots
+
+<b> Practical outcomes of R stats useful for competency test</b>
+
 
 ###Lesson 4. Exploratory data analysis (EDA) in r.
 fundamental descriptive stats.
