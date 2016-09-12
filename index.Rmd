@@ -36,7 +36,21 @@ data literacy IS data science.
 
 [The importance of data viz](http://datascienceplus.com/the-importance-of-data-visualization/)
 
-<b>Data viz first and foremost.</b>
+<b> Philosophy of R stats </b>
+Statistical thinking: likelihood, error, and effect sizes. Contemporary statisticians embrace and are mindful of these three key concepts in all research, data, and statistical inference examinations.
+
+Modes of inference with your data: using data, what can you infer or do?
+1. Data description
+2. Likelihood
+3. Estimation
+4. Baysian inference - weight and include what we know
+5. Prediction
+6. Hypothesis testing
+7. Decision making -balance gains and risks
+
+This set of ideas provide the foundation for many data science and statistical approached to working with evidence within almost every domain of science.
+
+<b>Data viz first and foremost. Case study #1.</b>
 ```{r, data viz exercise}
 #blog post by Fisseha Berhane
 library(ggplot2)
@@ -88,7 +102,7 @@ ggplot(all_data, aes(x=x,y=y)) +geom_point(shape = 21, colour = "red", fill = "o
 Outcome from stats first, data viz later (tricked), descriptive estimates of data can be deceptive. Draw first, then interpret.
 
 
-<b>Survey data from class</b>
+<b>Survey data from class. Case study #2.</b>
 ```{r, survey}
 #load class survey responses from google poll completed in class
 survey<-read.csv("biol5081.1.csv")
@@ -118,6 +132,13 @@ anova(m1, test="Chisq") #test whether the differences in model are different
 #Too little evidence to be significantly different between disciplines.
 
 ```
+
+<b> Practical outcomes of R stats </b>
+Understand the difference between R and R Studio.
+Use scripts or R Markdown files to save all your work.
+Be prepared to share you code.
+Load data, clean data, visualize data, then and only then begin applying statistics.
+Proximately: be able to use and work with dataframes, vectors, functions, and libraries in R.
 
 ###Lesson 2. Workflows & Data Wrangling (WDW).
 worflows
