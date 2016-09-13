@@ -171,10 +171,10 @@ as.factor
 is.numeric
 na
 
-<b>tidyverse: primarily dyplyr</b>
+<b>tidyverse</b>
+
 [Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
-tidyr 
 [tidyr](https://cran.r-project.org/web/packages/tidyr/README.html)
 
 <b> Practical outcomes of R stats useful for competency test</b>
@@ -185,17 +185,24 @@ lattice.
 ggplot2.
 you need to see data. see the trends. explore them using visuals.
 
-PK talk here :)
+[Contemporary data viz for statistical analyses slide deck](http://www.slideshare.net/cjlortie/data-visualization-in-r-65991145)
 
 <b> Philosophy of R stats </b>
 Clean simple graphics are powerful tools in statistics (and in scientific communication).  Tufte and others have shaped data scientists and statisticians in developing more libraries, new standards, and assumptions associated with graphical representations of data.  Data viz must highlight the differences, show underlying data structures, and provide insights into the specific research project. R is infinitely customizable in all these respects.  There are at least two major current paradigms (there are more these are the two dominant idea sets).  Base R plots are simple, relatively flexible, and very easy. However, their grammar, i.e their rules of coding are not modern. Ggplot and related libraries invoke a new, formal grammar of graphics that is more logical, more flexible, but divergent from base R code. It is worth the time to understand the differences and know when to use each.
 
-<b>Base R</b>
+Evolution of plotting in statistics using R in particular went from base-R then onto lattice then to the ggvis universe with the most recent library being ggplot2. Base-R is certainly useful in some contexts as is the lattice and lattice extra library. However, ggplot2 now encompasses all these capacities with a much simpler set of grammar (i.e. rules and order). Nonetheless, you should be able to read base-R code for plots and be able to do some as well. The philosophy or grammar of modern graphics is well articulated and includes the following key principles.
 
-<b>GGPLOT2</b>
-qplots
+The grammar of graphics
+layers
+primacy of layers (simple first, then more complex) i.e. you build up your plots
+data are mapped to aesthetic attributes and geometric objects
+data first then statistics even in plots
 
-ggplots
+Disclaimer: I love the power of qplots.
+
+<b>Data viz case study #1.</b>
+
+
 
 <b> Practical outcomes of R stats useful for competency test</b>
 
