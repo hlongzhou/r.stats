@@ -266,8 +266,8 @@ qplot(carat, data = diamonds, facets = color ~ .,
   geom = "histogram", binwidth = 0.1, xlim = c(0, 3)) #to compare between groups
 
 #qplot is so powerful.
-#colour, shape and size have meaning in R code
-#you add layers
+#colour, shape and size have meaning in the R code from this library
+#layers added for you by qplots
 
 #qplot gets you 2x and one y or one x and 2y so >2 variables at once easily
 ```
