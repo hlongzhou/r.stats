@@ -249,13 +249,13 @@ qplot(carat, price, data = dsmall, colour = color)
 qplot(carat, price, data = dsmall, shape = cut)
 
 #how about using data viz to even more thoroughly explore potential stats we could do.
-#qplots - quick pllt, thoughful build of layers
+#qplots - quick plot, thoughful build of layers
 qplot(carat, price, data = dsmall, geom = c("point", "smooth"))
 
 #what about trying some stats on this now, at least from a viz philosophy
 qplot(color, price / carat, data = dsmall, geom = "boxplot") #can include formulas and methods
 
-#or ro check for proportional differences
+#or check for proportional differences
 qplot(carat, data = dsmall, geom = "histogram", fill = color) #to see proportions
 qplot(carat, data = dsmall, geom = "histogram", weight = price) # weight by a covariate
      
@@ -270,6 +270,10 @@ qplot(carat, data = diamonds, facets = color ~ .,
 #GGPLOT() gives you even more options for adding layers/options
 p <- ggplot(mtcars, aes(x = mpg, y = wt))
 p + geom_point()
+
+#now play time with this case study.
+#try out some geom options and different aesthetics and make some errors.
+#prize for the prettiest plots
 ```
 
 
