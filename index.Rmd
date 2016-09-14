@@ -201,7 +201,76 @@ data first then statistics even in plots
 Disclaimer: I love the power of qplots.
 
 <b>Data viz case study #1.</b>
+```{r, survey data viz}
+library(ggplot2)
+survey<-read.csv("BIOL5081.1.csv")
+str(survey)
 
+plot(survey$r.experience) #hard to tell what is going on
+
+qplot(r.experience, data=survey) #decided to make bins for me and count up)
+
+#so, we know better and instead do a histogram using base graphics
+#basic data viz for EDA
+hist(survey$r.experience) #better
+qplot(r.experience, data=survey, geom="histogram") #same as what is picked for us
+qplot(r.experience, data=survey, geom="histogram", binwidth=0.5)
+
+barplot(survey$r.experience) #confusing
+qplot(r.experience, data=survey, geom="bar") #what, it is back!
+
+#basic data viz for EDA but for interactions
+plot(survey$discipline, survey$r.experience)
+qplot(discipline, r.experience, data=survey) #not the same
+qplot(discipline, r.experience, data=survey, geom="boxplot")
+
+plot(survey$r.studio~survey$r.experience) #ugly
+qplot(r.experience, r.studio, data=survey) #useless
+qplot(r.studio, data=survey, weight = r.experience) #sweet new feature here
+
+#ok, so you get it. grammar different, visuals about the same for super quick, simple plots. The grammar hints at the power that awaits though.
+
+```
+
+<b>Data viz case study #2.</b>
+```{r, diamonds are our best friend}
+str(diamonds)
+#crazy number of observations. We need less. too many riches not always good.
+set.seed(1000)
+dsmall<-diamonds[sample(nrow(diamonds), 100), ]
+
+plot(dsmall$carat, dsmall$price)
+qplot(carat, price, data=dsmall)
+
+#ok no difference
+#now let's see what we can do with qplot with a few bits added
+#one little argument extra added
+qplot(carat, price, data = dsmall, colour = color)
+qplot(carat, price, data = dsmall, shape = cut)
+
+#how about using data viz to even more thoroughly explore potential stats we could do.
+#qplots - quick pllt, thoughful build of layers
+qplot(carat, price, data = dsmall, geom = c("point", "smooth"))
+
+#what about trying some stats on this now, at least from a viz philosophy
+qplot(color, price / carat, data = dsmall, geom = "boxplot") #can include formulas and methods
+
+#or ro check for proportional differences
+qplot(carat, data = dsmall, geom = "histogram", fill = color) #to see proportions
+qplot(carat, data = dsmall, geom = "histogram", weight = price) # weight by a covariate
+     
+#final idea, how about subsetting with the data right in the code for the plots!
+qplot(carat, data = diamonds, facets = color ~ .,
+  geom = "histogram", binwidth = 0.1, xlim = c(0, 3)) #to compare between groups
+
+#qplot is so powerful.
+#colour, shape and size have meaning in R code
+#you add layers
+
+#GGPLOT() gives you even more options for adding layers/options
+p <- ggplot(mtcars, aes(x = mpg, y = wt))
+p + geom_point()
+```
 
 
 <b> Practical outcomes of R stats useful for competency test</b>
