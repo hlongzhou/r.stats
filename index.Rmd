@@ -105,7 +105,7 @@ Outcome from stats first, data viz later (tricked), descriptive estimates of dat
 <b>Survey data from class. Case study #2.</b>
 ```{r, survey}
 #load class survey responses from google poll completed in class
-survey<-read.csv("biol5081.1.csv")
+survey<-read.csv("data/5081.survey.1.csv")
 str(survey) #check data match what we collected
 
 #data viz
@@ -172,6 +172,7 @@ is.numeric
 na
 
 <b>tidyverse</b>
+pipes
 
 [Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
@@ -203,7 +204,7 @@ Disclaimer: I love the power of qplots.
 <b>Data viz case study #1.</b>
 ```{r, survey data viz}
 library(ggplot2)
-survey<-read.csv("BIOL5081.1.csv")
+survey<-read.csv("data/5081.survey.1.csv")
 str(survey)
 
 plot(survey$r.experience) #hard to tell what is going on
@@ -318,10 +319,12 @@ qplot(displ, hwy, data=mpg, facets = . ~ year) + geom_smooth()
 
 ```
 
-
-
 <b> Practical outcomes of R stats useful for competency test</b>
-
+Do meaningful plot of a single variable wth nice labels.
+Do a meaningful plot of a relationship between two variables.
+Use qplots to do a plot that includes an aesthetic.
+Do a ggplot that includes three variables.
+ 
 
 ###Lesson 4. Exploratory data analysis (EDA) in r.
 fundamental descriptive stats.
