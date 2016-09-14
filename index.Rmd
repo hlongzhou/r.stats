@@ -230,6 +230,8 @@ qplot(r.studio, data=survey, weight = r.experience) #sweet new feature here
 
 #ok, so you get it. grammar different, visuals about the same for super quick, simple plots. The grammar hints at the power that awaits though.
 
+#grammar different, simple x or x~y plots about the same
+
 ```
 
 <b>Data viz case study #2.</b>
@@ -267,6 +269,11 @@ qplot(carat, data = diamonds, facets = color ~ .,
 #colour, shape and size have meaning in R code
 #you add layers
 
+#qplot gets you 2x and one y or one x and 2y so >2 variables at once easily
+```
+
+<b>Data viz case study #3.</b>
+```{r, ggplot}
 #GGPLOT() gives you even more options for adding layers/options
 p <- ggplot(mtcars, aes(x = mpg, y = wt))
 p + geom_point()
@@ -274,7 +281,43 @@ p + geom_point()
 #now play time with this case study.
 #try out some geom options and different aesthetics and make some errors.
 #prize for the prettiest plots
+
+#displ is car engine size in Liters
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+
+#so aethetics are one way to add variables in and expand your plotting power
+#however facets are another way to make multiple plots BY a factor
+
+#facet wrap is by one variable
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)
+
+#facet_wrap(~cell) - univariate: create a 1-d strip of panels, based on one factor, and wrap the strip into a 2-d matrix
+#facet_grid(row~col) - (usually) bivariate: create a 2-d matrix of panels, based on two factors
+
+#facet grid is by two variables
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ cyl)
+
+#another example more perfect code
+p <- ggplot(data = mpg, aes(x = displ, y = hwy, color = drv)) + geom_point()
+p + facet_wrap(~cyl)
+
+#or just use facets in qplot but much simpler
+qplot(displ, hwy, data=mpg, facets = . ~ year) + geom_smooth()
+
 ```
+
+<b>Data viz case study #4.</b>
+```{r, worked example}
+#try it with ecological.footprints.csv
+
+
+```
+
 
 
 <b> Practical outcomes of R stats useful for competency test</b>
