@@ -426,6 +426,26 @@ As advanced as you want to be.
 Fundamental principles demonstrated.
 At least two fundamental statistical tests demonstrated.
 
+<b>Practical outcomes to demonstrate </b>
+Rename some variables.
+Address missing values.
+Generate a simplified table/dataframe. 
+Visualize the data to identify patterns and relationships.
+Produce a publication quality graphic.
+Do EDA on data very broadly.
+Do a single statistical address to capture main effect observed.
+Annotate
+
+<b>Rubric</b>
+A total of 25% so 5 questions each worth 5 points.
+Likert Scale of 1 to 5 with 1 being low and 5 being awesome.
+
+(1) Can I understand what was done?
+(2) Can I repeat what was done?
+(3) Does the data viz effectively and thoroughly examine and show patterns/relations?
+(4) Is the EDA a clear and appropriate examination the evidence and demonstrates statistical thinking?
+(5) Is the final graphic and statistical test appropriate (tidy, polished, and meaningful) and suitable for publication?
+
 ###Lesson 6. Competency test.
 deliberate practice.
 tested with feedback.
