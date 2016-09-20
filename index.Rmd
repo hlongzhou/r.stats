@@ -211,6 +211,8 @@ summarise for bringing together many values
 
 [tidyr](https://cran.r-project.org/web/packages/tidyr/README.html)
 
+[Great wrangling webinar](https://www.rstudio.com/resources/webinars/data-wrangling-with-r-and-rstudio/)
+
 We will cover two basic challenges you will certainly encounter.
 <b>Missing data </b>
 ```{r, missing data}
