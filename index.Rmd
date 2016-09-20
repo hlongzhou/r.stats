@@ -420,6 +420,8 @@ Do a ggplot that includes three variables.
 fundamental descriptive stats.
 GLM. GLMM. Post hoc tests.
 
+[EDA from a data science perspective](http://r4ds.had.co.nz/exploratory-data-analysis.html#introduction-3)
+
 ###Lesson 5. Wrangle, visualize, and analyze.
 A graduate-level dataset.
 Apply your new mathemagical skills from scratch.
