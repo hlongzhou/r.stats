@@ -406,7 +406,57 @@ qplot(displ, hwy, data=mpg, facets = . ~ year) + geom_smooth()
 <b>Data viz case study #4.</b>
 ```{r, worked example}
 #try it with ecological.footprints.csv
+footprints <-read.csv("data/ecological.footprints.csv")
+str(footprints)
+#aha, R thinks year is an integet
+footprints$yr <- as.factor(footprints$yr)
+library(ggplot2)
+qplot(country, ecological.footprint, data = footprints) #too messy
 
+qplot(country, ecological.footprint, data = footprints, colour = yr) #better but still a lot to process
+
+qplot(country, ecological.footprint, data = footprints, facets = yr~.) #ok but do not love. hard to see distribution
+
+qplot(ecological.footprint, data = footprints) #you know what, this is not bad.  maybe add year in too/
+
+qplot(ecological.footprint, data = footprints, fill = yr) #ok now I starting to see structure and differences
+
+#OK, now I am ready for stats. Thinking about these data, I see we have only two years for some countries so cannot do within country or between country contrasts. So, most likely hypothesis I can test is whether ecological footprints are increasing between these two years. Not a perfect dataset really but could compare these two years.
+
+t.test(footprints$ecological.footprint~ footprints$yr)
+#ok looks like there are differences between years but it is hard to tell from previous plot. Realize now, I need a better plot still?
+
+qplot(yr, ecological.footprint, data = footprints, geom="boxplot") #this is weird, 2000 looks higher
+
+#different countries between years?
+#more countries reported in 2000?
+library(dplyr)
+footprints %>% count(yr)
+#Yup, way more data for year 2000
+#maybe should just the countries that were testedin both years?
+
+library(tidyr)
+matches <- spread(footprints, yr, ecological.footprint) %>% filter() %>% na.omit
+str(matches)
+matches
+
+#whoa, USA and Canada missing, and we have HUGE footprints.
+
+#got it. just the countries with measure in BOTH years.
+#now, gather up again with these filtered matches!
+
+new <- matches %>% gather(`2000`, `2012`, key = "yr", value ="ecological.footprint")
+new #ok so now a nice dataframe with just matches back in a format I can use for plots and stats
+
+qplot(yr, ecological.footprint, data = footprints, geom="boxplot")
+
+t.test(new$ecological.footprint~ new$yr, paired=TRUE)
+#Well, I give up, seems like the footprints for the world went down not up in this time period. GOOD NEWS for the environmental movement in some respects.
+new %>% group_by(yr) %>% summarise(mean(ecological.footprint))
+
+# We still use 2.4 planets worth of resources but only have one.
+
+#AND, we are missing some key countries that contribute to global change including Canada and USA.
 
 ```
 
