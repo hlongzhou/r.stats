@@ -465,6 +465,8 @@ Do meaningful plot of a single variable wth nice labels.
 Do a meaningful plot of a relationship between two variables.
 Use qplots to do a plot that includes an aesthetic.
 Do a ggplot that includes three variables.
+
+(Physics example in Wired Mag why to plot data even if you have model)[https://www.wired.com/2016/09/might-gotten-little-carried-away-physics-time/]
  
 ###Lesson 4. Exploratory data analysis (EDA) in r.
 fundamental descriptive stats.
