@@ -292,6 +292,8 @@ data first then statistics even in plots
 
 Disclaimer: I love the power of qplots.
 
+[ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+
 <b>Data viz case study #1.</b>
 ```{r, survey data viz}
 library(ggplot2)
@@ -470,9 +472,18 @@ Do a ggplot that includes three variables.
  
 ###Lesson 4. Exploratory data analysis (EDA) in r.
 fundamental descriptive stats.
+distributions via density plots
 GLM. GLMM. Post hoc tests.
+modelR
+
+[slide deck for EDA]()
+
+<b> Philosophy of R stats </b>
+
 
 [EDA from a data science perspective](http://r4ds.had.co.nz/exploratory-data-analysis.html#introduction-3)
+
+
 
 ###Lesson 5. Wrangle, visualize, and analyze.
 A graduate-level dataset.
