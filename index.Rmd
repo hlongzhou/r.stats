@@ -493,6 +493,9 @@ As advanced as you want to be.
 Fundamental principles demonstrated.
 At least two fundamental statistical tests demonstrated.
 
+<b>Halloween Hackathon</b>
+
+
 <b>Practical outcomes to demonstrate </b>
 Rename some variables.
 Address missing values.
