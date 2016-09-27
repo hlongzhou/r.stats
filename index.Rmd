@@ -494,7 +494,10 @@ Fundamental principles demonstrated.
 At least two fundamental statistical tests demonstrated.
 
 <b>Halloween Hackathon</b>
-
+Costumes options.
+Candy for sure.
+Pizza Provided.
+Now we practice from start to finish including submission of the r-script or rmd you write to turnitin.com
 
 <b>Practical outcomes to demonstrate </b>
 Rename some variables.
