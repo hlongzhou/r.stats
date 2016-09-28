@@ -483,6 +483,17 @@ modelR
 [slide deck for EDA]()
 
 <b> Philosophy of R stats </b>
+Exploratory data analyses is everything we have done.
+a. Tidy data.
+b. Inspect data structre.
+c. Data viz.
+d. Basic exploratory data analyses.
+
+However, now that we are ready to apply models, we add in one more tiny step. Visualize the data to better understand its typology and underlying distribution.  Then, you are ready to fit your models.
+
+A statistical model is an elegant, representative simplification of the patterns you have identified through data viz and EDA. It should capture data/experimental structure including the key variables, appropriate levels, and relevant covariation or contexts that mediate outcomes. It should support the data viz. It should provide an estimate of the statistical likelihood or probability of differences. Ideally, the underlying coefficients should also be mined to convey an estimate of effect sizes. A t.test, chi.square test, linear model, general linear model, or generalized linear mixed models are all examples of models that describe and summarize patterns and each have associated assumptions about the data they embody. Hence, the final step pre-model fit, is explore distributions.
+
+Conceptually, there are two kind of models. Those that look back and those that look forward. Think tardis or time machine. A model is always a snapshot using your time machine. It can be a grab of what happened or a future snap of what you predict. In R, there is simple code to time travel in either direction. Actually, there is no time - [Arrow of time](https://www.wired.com/2016/09/arrow-of-time/) - only an observer potential perception of it. Statistical models are our observers here.
 
 
 [EDA from a data science perspective](http://r4ds.had.co.nz/exploratory-data-analysis.html#introduction-3)
