@@ -495,6 +495,7 @@ A statistical model is an elegant, representative simplification of the patterns
 
 Conceptually, there are two kind of models. Those that look back and those that look forward. Think tardis or time machine. A model is always a snapshot using your time machine. It can be a grab of what happened or a future snap of what you predict. In R, there is simple code to time travel in either direction. Actually, there is no time - [Arrow of time](https://www.wired.com/2016/09/arrow-of-time/) - only an observer potential perception of it. Statistical models are our observers here. These observers use 'probability distributions' as we described in the first week sensu statistical thinking to calibrate what the think we observed or will observe given the evidence at hand.
 
+<b>Case study #1</b>
 ```{r, case study 1}
 library(ggplot2)
 library(dplyr)
@@ -509,7 +510,7 @@ ggplot(sim1) +
 ggplot(sim1) + 
   geom_histogram(mapping = aes(y), binwidth=5)
 
-shapiro.test(sim1$y) #p-value <0.05 means not different from noraml
+shapiro.test(sim1$y) #p-value <0.05 means not different from normal
 qqnorm(sim1$y) #qqplots common to inspsect quantiles
 
 #not significantly different from normal. great.
@@ -524,7 +525,33 @@ coef(m1) #remember 'minecraft' your model a bit to get a sense of effects.
 
 ```
 
+![](./families.png)
 
+<b> Case study #2 </b>
+```{r, case study study}
+ggplot(sim2) + 
+  geom_point(aes(x, y)) #categorical x
+
+ggplot(sim2) + 
+  geom_density(mapping = aes(y))
+
+ggplot(sim2) + 
+  geom_histogram(mapping = aes(y), binwidth=1) #changing binwidth really changes perception of distribution
+
+shapiro.test(sim2$y) 
+qqnorm(sim2$y) #non-normal
+#so, could do anova but likely not great link to underlying probability distribution
+m2 <- aov(y~x, data = sim2)
+summary(m2)
+names(m2)
+plot(m2$residuals) #residuals not bad
+#library(fitdistrplus)
+
+m3 <- glm(y~x, data = sim2, family = "quasi")
+summary(m3) #better
+#you can also explore distributions in even more detail to ensure correct model (correct = matches/describes underlying structure AND data distribution)
+
+```
 
 [EDA from a data science perspective](http://r4ds.had.co.nz/exploratory-data-analysis.html#introduction-3)
 
