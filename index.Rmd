@@ -27,7 +27,7 @@ adventure.time
 
 
 ###Lesson 1. Data science (DS).
-
+![](./bubblegum.png)
 want data. have data. will collect data.
 assumption: in this course, you are here to work with data.
 data literacy IS data science.
@@ -142,6 +142,7 @@ Load data, clean data, visualize data, then and only then begin applying statist
 Proximately: be able to use and work with dataframes, vectors, functions, and libraries in R.
 
 ###Lesson 2. Workflows & Data Wrangling (WDW).
+![](./beemo.rodeo.png)
 worflows
 reproduce. 
 openly.
@@ -149,7 +150,6 @@ openly.
 data wrangling
 more than half the battle.
 
-![](./beemo.rodeo.png)
 
 [Data wrangling slide deck](http://www.slideshare.net/cjlortie/data-wrangling-in-r-be-a-wrangler)
 
@@ -273,6 +273,7 @@ Grab part of a dataset.
 Use pipes to move/wrangle chunks of your dataset
 
 ###Lesson 3. Visualization in r (VR).
+![](./viz.png)
 basic plots.
 lattice.
 ggplot2.
@@ -472,6 +473,8 @@ Do a ggplot that includes three variables.
 (Physics example in Wired Mag why to plot data even if you have model)[https://www.wired.com/2016/09/might-gotten-little-carried-away-physics-time/]
  
 ###Lesson 4. Exploratory data analysis (EDA) in r.
+![](./EDA.png)
+
 fundamental descriptive stats.
 distributions via density plots
 GLM. GLMM. Post hoc tests.
@@ -488,6 +491,7 @@ modelR
 
 ###Lesson 5. Wrangle, visualize, and analyze.
 ![](./halloween.jpg)
+
 <b>Halloween Hackathon</b>
 Costumes options.
 Candy for sure.
@@ -524,6 +528,8 @@ Likert Scale of 1 to 5 with 1 being low and 5 being awesome.
 (5) Is the final graphic and statistical test appropriate (tidy, polished, and meaningful) and suitable for publication?
 
 ###Lesson 6. Competency test.
+![](./test.jpg)
+
 deliberate practice.
 tested with feedback.
 a virtual repeat of last week but evaluated
