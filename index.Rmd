@@ -510,7 +510,7 @@ ggplot(sim1) +
 ggplot(sim1) + 
   geom_histogram(mapping = aes(y), binwidth=5)
 
-shapiro.test(sim1$y) #p-value <0.05 means not different from normal
+shapiro.test(sim1$y) #p-value <0.05 means is different from normal
 qqnorm(sim1$y) #qqplots common to inspsect quantiles
 
 #not significantly different from normal. great.
