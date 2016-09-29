@@ -470,7 +470,7 @@ Do a meaningful plot of a relationship between two variables.
 Use qplots to do a plot that includes an aesthetic.
 Do a ggplot that includes three variables.
 
-(Physics example in Wired Mag why to plot data even if you have model)[https://www.wired.com/2016/09/might-gotten-little-carried-away-physics-time/]
+[Physics example in Wired Mag why to plot data even if you have a model](https://www.wired.com/2016/09/might-gotten-little-carried-away-physics-time/)
  
 ###Lesson 4. Exploratory data analysis (EDA) in r.
 ![](./EDA.png)
@@ -495,7 +495,7 @@ A statistical model is an elegant, representative simplification of the patterns
 
 Conceptually, there are two kind of models. Those that look back and those that look forward. Think tardis or time machine. A model is always a snapshot using your time machine. It can be a grab of what happened or a future snap of what you predict. In R, there is simple code to time travel in either direction. Actually, there is no time - [Arrow of time](https://www.wired.com/2016/09/arrow-of-time/) - only an observer potential perception of it. Statistical models are our observers here. These observers use 'probability distributions' as we described in the first week sensu statistical thinking to calibrate what the think we observed or will observe given the evidence at hand.
 
-<b>Case study #1</b>
+<b>Case study #1: x,y continuous</b>
 ```{r, case study 1}
 library(ggplot2)
 library(dplyr)
@@ -527,7 +527,7 @@ coef(m1) #remember 'minecraft' your model a bit to get a sense of effects.
 
 ![](./families.png)
 
-<b> Case study #2 </b>
+<b> Case study #2 categorical x, continuous y</b>
 ```{r, case study study}
 ggplot(sim2) + 
   geom_point(aes(x, y)) #categorical x
@@ -550,12 +550,153 @@ plot(m2$residuals) #residuals not bad
 m3 <- glm(y~x, data = sim2, family = "quasi")
 summary(m3) #better
 #you can also explore distributions in even more detail to ensure correct model (correct = matches/describes underlying structure AND data distribution)
+anova(m3, test="Chisq") #is x significant factor?
+
+#Cullen and Frey Graphs are cool
+#fitdistrplus not bad.  Usually, the type of data, ie. count, frequency, proportion is just as effective on deciding on family type vesus distribution exploration.  The goal is to fit the 'best' model. Best is simplest and representative. Formal tools to contrast models sometimes help too.
+
+#note, mixed models, can use lme4 package if some effects and others are random. Need to think this over. Fixed = groups or levels in factors not due to random causes, random effects = likely from random causes or latent drivers such as population/species specificity.
 
 ```
 
-[EDA from a data science perspective](http://r4ds.had.co.nz/exploratory-data-analysis.html#introduction-3)
+<b> Case study #3: interactions cat.x, cont.x, y</b>
+```{r, interactions with different x.classes}
+str(sim3)
+ggplot(sim3) +
+  geom_point(aes(x1, y, colour = x2))
+#x1 is continous
+#x2 is categorical
+#Q are there an effect of xs on y and do the effect interact, i.e. level of x1 influence changes by x2.
 
+ggplot(sim3) + 
+  geom_density(mapping = aes(y))
 
+ggplot(sim3) + 
+  geom_histogram(mapping = aes(y), binwidth=1)
+
+shapiro.test(sim3$y) 
+qqnorm(sim3$y)  
+#s.d. from normal but not bad. could be contigent on the levels of x.
+
+ggplot(sim3, aes(x1, y)) + 
+  geom_boxplot(aes(colour = x2))
+#so, looks like the distribution of y relates to the factors. Likely good to go on parametric linear model.
+
+m4 <-lm(y~x1*x2, data = sim3) #interactions terms for all levels
+summary(m4)
+m5 <-lm(y~x1+x2, data = sim3) #independent x1 & x2 effects on 7 modeled.
+summary(m5)
+plot(m5) #sometimes I plot the model to explore/mine model for its capacity to describe the patterns
+anova(m5, test="Chisq") #tells you if effects are significant.
+
+#you can also contrast different models using the anova of different models.
+m.b <-anova(m4,m5, test="Chisq")
+m.b
+
+```
+
+<b> Case study #4: interactions cont.x, cont.x, y</b>
+```{r, interactions with same x.classes}
+str(sim4)
+ggplot(sim4) +
+  geom_point(aes(x1, y, colour = x2))
+
+ggplot(sim4) + 
+  geom_density(mapping = aes(y))
+
+ggplot(sim4) + 
+  geom_histogram(mapping = aes(y), binwidth=1)
+
+shapiro.test(sim4$y) #more divegence from normality
+qqnorm(sim4$y)  
+m6 <-glm(y~x1*x2, data = sim4)
+summary(m6) #significant interaction term in model
+anova(m6, test="Chisq") #Looks solid.
+
+m7 <-glm(y~x1+x2, data = sim4)
+summary(m7) #missed interaction term here and given distribution exploration, likely important.
+
+m.b2 <-anova(m6, m7, test="Chisq")
+m.b2
+
+```
+
+<b> Case study #5: real data diamonds</b>
+```{r, diamonds you never fail use}
+#Lucy.
+#See data viz week for first steps.
+#real data always more complex
+ggplot(diamonds) +
+  geom_point(aes(carat, price, colour = cut))
+#so price is the most likely response we want to know about!
+#two key factors, different x.classes, cut is categorical, and carat is continous
+#look at price distribution (likely need to do by each x)
+ggplot(diamonds) +
+  geom_freqpoly(aes(price)) #long tail
+
+#now do by the two xs to see how y varies
+ggplot(diamonds, aes(carat, colour = cut)) +
+         geom_freqpoly(binwidth = 0.1)
+
+set.seed(1000)
+dsmall<-diamonds[sample(nrow(diamonds), 1000), ]
+shapiro.test(dsmall$price) 
+qqnorm(dsmall$price)  
+#ok, so we have a handle on the distribution.
+#certainly non-normal.
+
+#last idea!
+#before we move to fitting a model recognizing that the data look like negative binomial or poisson given the class, what if there are a relationship between the the xs?
+#what if larger diamonds cost more and better cut diamonds costs more but there are not more better cut AND large diamonds out there? Covariation is not positive.
+
+#EDA on just that
+ggplot(diamonds, aes(cut, carat)) +
+  geom_boxplot()
+m8 <-glm(carat~cut, data=diamonds)
+summary(m8) #looks different! More poor cut diamonds are larger...
+library(lsmeans)
+lsmeans(m8, "cut", adjust="tukey") # to see ls means
+
+#ok now ready for a simple model.
+library(MASS)
+m9 <-glm.nb(price~carat*cut, data = diamonds)
+summary(m9)
+anova(m9, test="Chisq")
+
+```
+<b>Tips</b>
+lme4 for mixed models
+vegan for ordinations
+Lavaan for SEMs
+MASS for count and negative binomial data
+(1 | factor) treats as random factor
+
+Ensure you see the different applications of the following models:
+anova
+lm
+glm
+glmm
+
+[EDA from a data science perspective: predictive](http://r4ds.had.co.nz/exploratory-data-analysis.html#introduction-3)
+
+<b> Practical skill outcomes of R stats useful for competency test</b>
+Worflow description complete now.
+
+Be able to use EDA & data viz to select a model.
+Be able to explore distributions of datasets.
+Be able to fit descriptive models (super simple to simple).
+Predictive models if you like too but not required.
+Be able to examine efficiacy of a model.
+
+Recognize through application of a few models that the following rule is never broken in stats...
+
+Rule: Statistics are never prescriptive. 
+
+Processes include description or prediction.
+Models are powerful, purposeful tools you can use to capture & communicate evidence.
+
+<b>Homework</b>
+Revisit survey, ttc, or footprints data and end with a model.
 
 ###Lesson 5. Wrangle, visualize, and analyze.
 ![](./halloween.jpg)
