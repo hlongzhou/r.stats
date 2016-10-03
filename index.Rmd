@@ -698,14 +698,35 @@ Models are powerful, purposeful tools you can use to capture & communicate evide
 <b>Homework</b>
 Revisit survey, ttc, or footprints data and end with a model.
 
+<b> Additional readings </b>
+
+[GLMM for ecologists](http://glmm.wikidot.com)
+
+[A practical guide to linear models](http://avesbiodiv.mncn.csic.es/estadistica/curso2011/regm26.pdf)
+
+[General how to choose the right test](http://med.cmb.ac.lk/SMJ/VOLUME%203%20DOWNLOADS/Page%2033-37%20-%20Choosing%20the%20correct%20statistical%20test%20made%20easy.pdf)
+
+[SUPER flowchart](http://abacus.bates.edu/~ganderso/biology/resources/stats_flow_chart_v2014.pdf)
+
+[Interpreting R output](https://rstudio-pubs-static.s3.amazonaws.com/119859_a290e183ff2f46b2858db66c3bc9ed3a.html)
+
+![](./flowchart.jpg)
+
+
 ###Lesson 5. Wrangle, visualize, and analyze.
 ![](./halloween.jpg)
 
+
+Here is a webinar I like and also a good book chapter.
+
+[Tutorial on reading data into R](https://www.rstudio.com/resources/webinars/getting-your-data-into-r/)
+
+[Great read on efficient data carpentry](https://bookdown.org/csgillespie/efficientR/data-carpentry.html)
+
 <b>Halloween Hackathon</b>
 Costumes options.
-Candy for sure.
-Pizza Provided.
-Now we practice from start to finish including submission of the r-script or rmd you write to turnitin.com
+Candy provided.
+Now, we practice from start to finish including submission of the r-script or rmd you write to turnitin.com
 
 A graduate-level dataset.
 Apply your new mathemagical skills from scratch.
@@ -713,8 +734,6 @@ A single three-hour block.
 As advanced as you want to be.
 Fundamental principles demonstrated.
 At least two fundamental statistical tests demonstrated.
-
-DATA HERE:
 
 <b>Practical outcomes to demonstrate </b>
 Rename some variables.
@@ -741,7 +760,8 @@ Likert Scale of 1 to 5 with 1 being low and 5 being awesome.
 
 deliberate practice.
 tested with feedback.
-a virtual repeat of last week but evaluated
+a virtual repeat of last week with new data but evaluated.
+Pizza provided this week.
 
 
 
