@@ -723,6 +723,8 @@ Here is a webinar I like and also a good book chapter.
 
 [Great read on efficient data carpentry](https://bookdown.org/csgillespie/efficientR/data-carpentry.html)
 
+[Efficient statistics slide deck](http://www.slideshare.net/cjlortie/efficient-statistics-in-r)
+
 <b>Halloween Hackathon</b>
 Costumes options.
 Candy provided.
