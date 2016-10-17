@@ -776,5 +776,87 @@ Pizza provided this week.
 1. Learn how to use inner_join
 2. Practice using the 'file/knit document' within RStudio. [I am happy to review and accept only the R code but as as backup a knit of the output including code as PDF is good. Also, knitted docs/pdfs/html pages are super for sharing your analyses with your graduate researcher collaborators or mentors]. This entire 6-week course is just a single RMD file knitted. 
 
+###FINAL CODE TIPS
+Hi fellow biostats adventurers,
+
+<b>Preamble & my feedback to you for the course</b>
+Thank you for the most active, engaging teaching and learning experience ever. I really enjoyed every single class and learnt many things every class from you (AIC, TukeyHSD, etc and other neat, clean tips I had not tried before). I appreciated your engagement, challenging questions, and your passion for using evidence to sort out science. Fantastic. This is what real science is - always. Furthermore, it is even more of an exploration then we modeled wherein the best scientists are always looking up stuff, solving code problems, and tackling frontiers through structured team and individual problem solving. No one to ask for answers from.
+
+As you know, we tackled real data with real challenges in week 5 and again in week 6. I realize that this come with some really exciting opportunities such as novelty and the capacity to address new questions. I am still super keen to explore each dataset/repo to figure them out.  However, real data came with real limitations too.  For instance, the world running record data scrape was very challenging.  I am working on solving this right now with a packages for string manip like the gsub function.  The teaching prep for this was entire course planned in advance, on a GitHub repo with embedded code, big and little picture, week 5 practice but not marked, you marked my code too, rubric three weeks in advance, and discussion in class of challenges that we discovered together through other sessions. Nonetheless, real data can be a surprise, and there were some in week6. Thank you for positive attitude and patience with the process. Exactly how science works, and I will mark accordingly - process-based coding is what we practiced for 6 weeks. Logic, tidy data, and natural statistics.
+
+So, I wanted to assure EACH of you regardless of whether you tackled those specific running data or not, that I appreciate all these REAL data scraped from open, online data sources will be marked very fairly. The purpose of the time-bounded, 3hour hack was primarily for you to show you can load a dataset, wrangle it a bit (hence we needed to work with real and not canned data), do some EDA, do a plot, fit a model, and most importantly think statistically.  I am certain your code will convey this. I was so proud of the progress you made in a really short time.
+
+<b>Instructions for repeat hack</b>
+The purpose is for you to refine, annotate a bit better, and add a very short single paragraph using annotation to interpret what you found - i.e #answer the questions I proposed for those data OR whatever cool question you may have cooked up in working with the data in depth.
+
+THIS is exactly what every test should be like. You do it once, like a first draft of a paper, a creative examination of the evidence, but then you have  bit more time, think it over, revise and improve it.
+
+EXACT SAME RUBRIC as we listed and have been using to be totally FAIR. BUT, I want you to provide with you some guidance from my limited experience in revising code and sharing it with collaborators - JUST like track changes when you are editing a paper with co-authors.
+
+
+REMINDER of rubric: pasted directly from Week5. Rubric A total of 25% so 5 questions each worth 5 points. Likert Scale of 1 to 5 with 1 being low and 5 being awesome.
+
+Can I understand what was done?
+Can I repeat what was done?
+Does the data viz effectively and thoroughly examine and show patterns/relations?
+Is the EDA a clear and appropriate examination the evidence and demonstrates statistical thinking?
+Is the final graphic and statistical test appropriate (tidy, polished, and meaningful) and suitable for publication?
+
+HOWEVER, I know you may have a few questions still for the repeat hack. Hey they are.
+
+<b>FAQS for revising code</b>
+1. Do I improve and revise this code or just write interpretation of the work I did in class?
+
+I suggest you revise the code, either tidy up a bit and ensure final model fit is good, and/or add in the most important covariate we may have not had time for in the class.  THEN, write a short paragraph on the revised code?
+
+2. What if code does not run for collaborator (i.e. chris)? Wiggle room?
+
+Absolutely. It is Likert 1-5 not binary. So, I will do my best to trouble shoot error and get it to run. If minor and evident it is not associated with poor statistical thinking, minor reduction of course, not 0.
+
+3. If I am happy with what I have done and want to try another one, can I?
+
+Absolutely, if you are happy with what you tried, sure, practice your statistical thinking and coding and try another and submit that instead.
+
+4. How do I show what I changed in the revisions?
+
+This is a question that we face all the time, even using versioning in R Studio with commits and push/pull via GitHub.
+
+I recommend the following:
+
+1. ANNOTATE the CHANGES you are trying/adding to make it SUPER easy for me to find and see them in your code (or for any collaborator).
+
+```{r,example}
+#revision: added in a new plot here showing distribution by groups/covariate levels instead of entire y
+
+#revision: check AIC scores or did anova(m1,m2, test=...) to compare the second potential model I added here.
+
+```
+
+<b>SUMMARY</b>
+Here is what I am explicitly looking for in your second round/revision.
+
+(1) <b>#revisions</b>.... that show you cleaned up, refined, and applied a bit more statistical thinking such as distribution, covariates, or alternative models. 
+
+(I will use existing rubric Q4 to mark this)
+
+(2) <b>#annotation paragraph</b> at the very end of your R/RMD script to ensure you understand it. 
+
+Is the final graphic and statistical model you fit appropriate? (same as before, but now I just check the final paragraph you added).
+
+Q5 in original rubric but it should be great now. If you aced it first time round, then I just check your final annotation paragraph to ensure you understood why and answered a key statistical question that the data could address.
+
+<b>TWO things left to do</b>
+
+(1) Provide revisions.... that show you cleaned up, refined, and applied a bit more statistical thinking such as distribution, covariates, or alternative models. 
+
+
+(2) Write a short #annotation paragraph at the end of script explaining the answer to the question(s) you addressed and what it means.
+
+May all your biostatistical experiences be an adventure in discovery!
+
+![](./the end.jpg)
+
+
+
 
 
