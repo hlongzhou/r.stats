@@ -856,6 +856,9 @@ May all your biostatistical experiences be an adventure in discovery!
 
 ![](./the end.jpg)
 
+<b>Prologue.</b>
+Not over yet! [EDA on code scores](https://cjlortie.github.io/biostats.gradeR/)
+
 
 
 
